@@ -17,23 +17,24 @@ let displayDate = getTodaysDate();
 h3.innerText = `Today's date is ${displayDate.currentDate}/${displayDate.currentMonth}/${displayDate.currentYear}`;
 
 /**
- * Finds out current time
- * @return {object} returns hour,minute and second object
+ * Returns the current time as an object with hour, minute, and second properties.
+ * @return {object} The current time object.
  */
-
-function getTime(){
-  let now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const seconds = now.getSeconds();
-  return {hours, minutes, seconds}
+function getTime() {
+  const now = new Date();
+  return {
+    hours: now.getHours(),
+    minutes: now.getMinutes(),
+    seconds: now.getSeconds()
+  };
 }
 
-// Create a time element and display the current time on the page
+// Display the current time on the page
 const timeEle = document.createElement("h3");
 const time = getTime();
-timeEle.innerText = `${time.hours}:${time.minutes}:${time.seconds}`
+timeEle.textContent = `${time.hours}:${time.minutes}:${time.seconds}`;
 document.body.appendChild(timeEle);
+
 
 
 
