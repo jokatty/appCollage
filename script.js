@@ -51,5 +51,15 @@ function createElement(){
   });
 }
 
+// Call createElement function to create task list on the page.
 createElement();
+
+
+const userNameForm = document.getElementById("userNameForm");
+userNameForm.addEventListener("submit",(event)=>{
+  event.preventDefault();
+  const userName = document.getElementById("name").value;
+  console.log(userName)
+} );
+
 
