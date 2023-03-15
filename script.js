@@ -35,7 +35,21 @@ const time = getTime();
 timeEle.textContent = `${time.hours}:${time.minutes}:${time.seconds}`;
 document.body.appendChild(timeEle);
 
+/**
+ * Creats a list of elements with values(tasks) on the page. 
+ */
+function createElement(){
+  const taskDiv = document.createElement('div');
+  document.body.appendChild(taskDiv);
+  const ul = document.createElement('ul');
+  taskDiv.appendChild(ul)
+  const dailyTask = ["Check emails", "Go for run", " Cook", "Read a book"];
+  dailyTask.forEach(task => {
+    const li = document.createElement('li');
+    ul.appendChild(li);
+    li.textContent = task;
+  });
+}
 
-
-
+createElement();
 
