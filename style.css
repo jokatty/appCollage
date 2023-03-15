@@ -1,3 +1,13 @@
 body {
   background-color: aquamarine;
 }
+
+h1,
+h3 {
+  font-family: sans-serif;
+}
+
+li {
+  font-size: medium;
+  color: gray;
+}
